@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Login Page</title>
+    <script>
+    //input validation using javascript
+    function validate() {
+    	if(document.getElementById('id'). value =='') {
+    		alert( 'Student ID is compulsory.');
+        } else if (document.getElementById('password'). value =='') {
+    		alert( 'Password is compulsory.');
+        } else {
+        	//submit the form
+        	//document.forms[0].submit();
+        	document.getElementById('loginForm').submit();
+        }
+    }
+    </script>
+
+  </head>
+  <body>
+    <center>
+    <form action='studentInfo.jsp' method='POST' id= 'loginForm'>
+    <p>Student ID: <input type='text' name='id' id= 'id'/></p>
+    <p>Password: <input type='password' name='password' id= 'password'/></p>
+    <p><button type='button' onclick= "validate()">Login</button>
+       <button type='reset'>Reset</button></p>
+  
+    </form>
+    </center>
+  </body>
+</html>

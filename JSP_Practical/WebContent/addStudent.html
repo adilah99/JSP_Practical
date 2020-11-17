@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add new student</title>
+
+<script>
+  function validate() {
+	   if (document.getElementById('id'). value =='') {
+  			alert( 'Student ID is compulsory.');
+  		
+	   } else if(document.getElementById('password'). value =='') {
+    		alert( 'Password is compulsory.');
+    	} else if (document.getElementById('name'). value =='') {
+    		alert( 'Name is compulsory');
+    	} else if (document.getElementById('department'). value =='') {
+    		alert( 'Department is compulsory.');
+        } else {
+        	//submit the form
+        	//document.forms[0].submit();
+        	document.getElementById('addStdForm').submit();
+        }
+    }
+    </script>
+</head>
+<body>
+
+<form action="addStudent.jsp" method="POST" id='addStdForm'>
+	<h1>New Student Registration</h1>
+	<p>Enter Student ID: <input type="text" name="id" id= 'id'/></p> 
+	<p>Enter password: <input type="text" name="password" id= 'password'/></p>
+	<p>Enter name: <input type="text" name="name" id= 'name' /></p>
+	<p>Enter department: <input type="text" name="department" id= 'department'/></p>
+	
+	
+	<p><button type="submit" onclick= "validate()">Submit</button>
+	<button type='reset'>Reset</button></p>
+</form>
+</body>
+</html>
